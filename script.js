@@ -304,3 +304,6 @@ class QuizApp {
         });
     }
 }
+
+// Make QuizApp instance globally available for admin system
+let quizAppInstance;
