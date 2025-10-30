@@ -32,21 +32,14 @@ class AdminSystem {
     addAdminAccessButton() {
         // Function to add the button when DOM is ready
         const addButton = () => {
-            const authScreen = document.getElementById('authScreen');
-            if (!authScreen) {
-                setTimeout(addButton, 100); // Retry if screen not found
+            const authContainer = document.querySelector('.auth-container');
+            if (!authContainer) {
+                setTimeout(addButton, 100); // Retry if container not found
                 return;
             }
 
             // Check if button already exists
             if (document.getElementById('adminAccessBtn')) {
-                return;
-            }
-
-            // Find the login form container
-            const loginForm = authScreen.querySelector('.auth-form');
-            if (!loginForm) {
-                setTimeout(addButton, 100); // Retry if form not found
                 return;
             }
 
@@ -60,13 +53,13 @@ class AdminSystem {
             `;
             adminAccess.style.cssText = `
                 text-align: center;
-                margin-top: 1rem;
+                margin-top: 1.5rem;
                 padding-top: 1rem;
                 border-top: 1px solid rgba(255, 255, 255, 0.1);
             `;
 
-            // Insert after the login form
-            loginForm.appendChild(adminAccess);
+            // Insert at the end of the auth container (after both forms)
+            authContainer.appendChild(adminAccess);
 
             // Add event listener
             document.getElementById('adminAccessBtn').addEventListener('click', () => {
