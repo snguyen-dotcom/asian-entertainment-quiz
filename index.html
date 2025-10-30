@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asian Entertainment Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-star"></i>
+                <span>Asian Entertainment Quiz</span>
+            </div>
+            <div class="nav-menu">
+                <button id="homeBtn" class="nav-btn active">
+                    <i class="fas fa-home"></i> Home
+                </button>
+                <button id="quizBtn" class="nav-btn">
+                    <i class="fas fa-question-circle"></i> Quiz
+                </button>
+                <button id="leaderboardBtn" class="nav-btn">
+                    <i class="fas fa-trophy"></i> Leaderboard
+                </button>
+                <button id="profileBtn" class="nav-btn">
+                    <i class="fas fa-user"></i> Profile
+                </button>
+            </div>
+            <div class="user-info" id="userInfo" style="display: none;">
+                <span id="currentUser"></span>
+                <button id="logoutBtn" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Login/Register Screen -->
+        <div id="authScreen" class="screen active">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h1><i class="fas fa-star"></i> Asian Entertainment Quiz</h1>
+                    <p>Test your knowledge of K-pop, J-pop, C-pop, Asian dramas, movies, and more!</p>
+                </div>
+                
+                <div class="auth-tabs">
+                    <button id="loginTab" class="auth-tab active">Login</button>
+                    <button id="registerTab" class="auth-tab">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="loginUsername" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="auth-btn">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                </form>
+
+                <!-- Register Form -->
+                <form id="registerForm" class="auth-form" style="display: none;">
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="registerUsername" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="registerEmail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="registerPassword" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                    <button type="submit" class="auth-btn">
+                        <i class="fas fa-user-plus"></i> Register
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Home Screen -->
+        <div id="homeScreen" class="screen">
+            <div class="home-container">
+                <div class="welcome-section">
+                    <h1>Welcome to Asian Entertainment Quiz!</h1>
+                    <p>Test your knowledge across multiple categories of Asian entertainment</p>
+                </div>
+
+                <div class="categories-grid">
+                    <div class="category-card" data-category="kpop">
+                        <div class="category-icon">🎵</div>
+                        <h3>K-Pop</h3>
+                        <p>Korean music, groups, and culture</p>
+                        <div class="category-stats">
+                            <span class="question-count">25 Questions</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="jpop">
+                        <div class="category-icon">🎌</div>
+                        <h3>J-Pop & Anime</h3>
+                        <p>Japanese music, anime, and culture</p>
+                        <div class="category-stats">
+                            <span class="question-count">20 Questions</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="cpop">
+                        <div class="category-icon">🏮</div>
+                        <h3>C-Pop & Mandopop</h3>
+                        <p>Chinese and Taiwanese music</p>
+                        <div class="category-stats">
+                            <span class="question-count">15 Questions</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="dramas">
+                        <div class="category-icon">📺</div>
+                        <h3>Asian Dramas</h3>
+                        <p>K-dramas, J-dramas, C-dramas</p>
+                        <div class="category-stats">
+                            <span class="question-count">20 Questions</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="movies">
+                        <div class="category-icon">🎬</div>
+                        <h3>Asian Cinema</h3>
+                        <p>Movies from across Asia</p>
+                        <div class="category-stats">
+                            <span class="question-count">15 Questions</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="mixed">
+                        <div class="category-icon">🌟</div>
+                        <h3>Mixed Challenge</h3>
+                        <p>All categories combined</p>
+                        <div class="category-stats">
+                            <span class="question-count">30 Questions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-trophy"></i>
+                        <div class="stat-info">
+                            <span class="stat-number" id="userHighScore">0</span>
+                            <span class="stat-label">Best Score</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="stat-info">
+                            <span class="stat-number" id="userQuizzesTaken">0</span>
+                            <span class="stat-label">Quizzes Taken</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-medal"></i>
+                        <div class="stat-info">
+                            <span class="stat-number" id="userRank">-</span>
+                            <span class="stat-label">Global Rank</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" class="screen">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span class="progress-text" id="progressText">Question 1 of 10</span>
+                    </div>
+                    <div class="quiz-score">
+                        <i class="fas fa-star"></i>
+                        <span id="currentScore">0</span>
+                    </div>
+                </div>
+
+                <div class="quiz-content">
+                    <div class="question-container">
+                        <h2 id="questionText">Loading question...</h2>
+                        <div class="question-category" id="questionCategory"></div>
+                    </div>
+
+                    <div class="answers-container" id="answersContainer">
+                        <!-- Answers will be dynamically inserted here -->
+                    </div>
+
+                    <div class="quiz-controls">
+                        <button id="nextBtn" class="quiz-btn" style="display: none;">
+                            Next Question <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button id="finishBtn" class="quiz-btn" style="display: none;">
+                            Finish Quiz <i class="fas fa-flag-checkered"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="screen">
+            <div class="results-container">
+                <div class="results-header">
+                    <div class="results-icon">
+                        <i class="fas fa-trophy" id="resultsIcon"></i>
+                    </div>
+                    <h1 id="resultsTitle">Quiz Complete!</h1>
+                    <p id="resultsMessage">Great job on completing the quiz!</p>
+                </div>
+
+                <div class="results-stats">
+                    <div class="result-stat">
+                        <div class="stat-value" id="finalScore">0</div>
+                        <div class="stat-label">Final Score</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="stat-value" id="correctAnswers">0/0</div>
+                        <div class="stat-label">Correct Answers</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="stat-value" id="accuracy">0%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="playAgainBtn" class="results-btn primary">
+                        <i class="fas fa-redo"></i> Play Again
+                    </button>
+                    <button id="homeFromResultsBtn" class="results-btn">
+                        <i class="fas fa-home"></i> Home
+                    </button>
+                    <button id="viewLeaderboardBtn" class="results-btn">
+                        <i class="fas fa-trophy"></i> Leaderboard
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leaderboard Screen -->
+        <div id="leaderboardScreen" class="screen">
+            <div class="leaderboard-container">
+                <div class="leaderboard-header">
+                    <h1><i class="fas fa-trophy"></i> Leaderboard</h1>
+                    <div class="leaderboard-filters">
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="kpop">K-Pop</option>
+                            <option value="jpop">J-Pop & Anime</option>
+                            <option value="cpop">C-Pop</option>
+                            <option value="dramas">Asian Dramas</option>
+                            <option value="movies">Asian Cinema</option>
+                            <option value="mixed">Mixed Challenge</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="leaderboard-list" id="leaderboardList">
+                    <!-- Leaderboard entries will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Screen -->
+        <div id="profileScreen" class="screen">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h1 id="profileUsername">Username</h1>
+                        <p id="profileEmail">email@example.com</p>
+                        <div class="profile-badge" id="profileBadge">Beginner</div>
+                    </div>
+                </div>
+
+                <div class="profile-stats">
+                    <div class="profile-stat">
+                        <i class="fas fa-trophy"></i>
+                        <div class="stat-details">
+                            <span class="stat-number" id="profileHighScore">0</span>
+                            <span class="stat-label">Highest Score</span>
+                        </div>
+                    </div>
+                    <div class="profile-stat">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="stat-details">
+                            <span class="stat-number" id="profileQuizzesTaken">0</span>
+                            <span class="stat-label">Total Quizzes</span>
+                        </div>
+                    </div>
+                    <div class="profile-stat">
+                        <i class="fas fa-percentage"></i>
+                        <div class="stat-details">
+                            <span class="stat-number" id="profileAvgAccuracy">0%</span>
+                            <span class="stat-label">Average Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-achievements">
+                    <h3>Achievements</h3>
+                    <div class="achievements-grid" id="achievementsGrid">
+                        <!-- Achievements will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Initialize the app when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new QuizApp();
+        });
+    </script>
+</body>
+</html>
