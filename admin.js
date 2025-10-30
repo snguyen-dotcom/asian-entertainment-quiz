@@ -25,29 +25,62 @@ class AdminSystem {
         // Add admin panel
         this.createAdminPanel();
 
-        // Add admin access button (visible to everyone)
+        // Add admin access button (visible to everyone) - with proper timing
         this.addAdminAccessButton();
     }
 
     addAdminAccessButton() {
-        // Add admin access button under the login button
-        const loginForm = document.getElementById('loginForm');
-        const adminAccess = document.createElement('div');
-        adminAccess.className = 'admin-access-login';
-        adminAccess.innerHTML = `
-            <button id="adminAccessBtn" class="admin-access-btn-login" title="Admin Access">
-                <i class="fas fa-key"></i> Admin Access
-            </button>
-        `;
-        adminAccess.style.cssText = `
-            text-align: center;
-            margin-top: 1rem;
-        `;
-        loginForm.appendChild(adminAccess);
+        // Function to add the button when DOM is ready
+        const addButton = () => {
+            const authScreen = document.getElementById('authScreen');
+            if (!authScreen) {
+                setTimeout(addButton, 100); // Retry if screen not found
+                return;
+            }
 
-        document.getElementById('adminAccessBtn').addEventListener('click', () => {
-            this.showAdminLogin();
-        });
+            // Check if button already exists
+            if (document.getElementById('adminAccessBtn')) {
+                return;
+            }
+
+            // Find the login form container
+            const loginForm = authScreen.querySelector('.auth-form');
+            if (!loginForm) {
+                setTimeout(addButton, 100); // Retry if form not found
+                return;
+            }
+
+            // Create admin access button container
+            const adminAccess = document.createElement('div');
+            adminAccess.className = 'admin-access-login';
+            adminAccess.innerHTML = `
+                <button id="adminAccessBtn" class="admin-access-btn-login" title="Admin Access">
+                    <i class="fas fa-key"></i> Admin Access
+                </button>
+            `;
+            adminAccess.style.cssText = `
+                text-align: center;
+                margin-top: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            `;
+
+            // Insert after the login form
+            loginForm.appendChild(adminAccess);
+
+            // Add event listener
+            document.getElementById('adminAccessBtn').addEventListener('click', () => {
+                this.showAdminLogin();
+            });
+        };
+
+        // Try to add button when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', addButton);
+        } else {
+            // DOM is already loaded, try immediately and with retries
+            addButton();
+        }
     }
 
     createAdminModal() {
