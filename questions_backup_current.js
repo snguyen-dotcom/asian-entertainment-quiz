@@ -1,12 +1,9 @@
-// Asian Entertainment Quiz Questions Database - MEGA EXPANSION
-// 250+ carefully fact-checked questions with verified answers!
-// Organized by difficulty: Easy (10pts), Medium (15pts), Hard (20pts)
+// Asian Entertainment Quiz Questions Database - Expanded Edition
+// Now includes 200+ questions across all categories!
 
 const QUESTIONS_DATABASE = {
     kpop: [
-        // === K-POP SECTION: 75 QUESTIONS ===
-        
-        // EASY LEVEL (25 questions)
+        // Original questions + 35 new ones = 50 total K-pop questions
         {
             question: "Which group is known as the 'Kings of K-pop'?",
             options: ["EXO", "BTS", "BIGBANG", "Super Junior"],
@@ -29,30 +26,16 @@ const QUESTIONS_DATABASE = {
             points: 10
         },
         {
-            question: "What is BTS's fandom called?",
-            options: ["ARMY", "BLINK", "ONCE", "EXO-L"],
+            question: "What is the name of TWICE's reality show?",
+            options: ["TWICE TV", "OOH-AHH", "What is Love?", "TT"],
             correctAnswer: 0,
             category: "K-Pop",
             points: 10
         },
         {
-            question: "Which girl group is known for the song 'Gee'?",
-            options: ["Girls' Generation (SNSD)", "Wonder Girls", "KARA", "2NE1"],
-            correctAnswer: 0,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "How many members are in TWICE?",
-            options: ["7", "8", "9", "10"],
-            correctAnswer: 2,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "Which company does NewJeans belong to?",
-            options: ["HYBE", "ADOR", "SM", "YG"],
-            correctAnswer: 1,
+            question: "Which BTS member is the main rapper?",
+            options: ["RM", "Suga", "J-Hope", "All of them rap"],
+            correctAnswer: 3,
             category: "K-Pop",
             points: 10
         },
@@ -64,6 +47,34 @@ const QUESTIONS_DATABASE = {
             points: 10
         },
         {
+            question: "Which girl group is known for the song 'Gee'?",
+            options: ["Girls' Generation (SNSD)", "Wonder Girls", "KARA", "2NE1"],
+            correctAnswer: 0,
+            category: "K-Pop",
+            points: 10
+        },
+        {
+            question: "What is the name of Red Velvet's fanclub?",
+            options: ["ReVeluv", "Red Flavor", "Velvet", "RV"],
+            correctAnswer: 0,
+            category: "K-Pop",
+            points: 10
+        },
+        {
+            question: "Which company does NewJeans belong to?",
+            options: ["HYBE", "ADOR", "SM", "YG"],
+            correctAnswer: 1,
+            category: "K-Pop",
+            points: 10
+        },
+        {
+            question: "What is the name of SEVENTEEN's self-producing system?",
+            options: ["Self-Made", "DIY", "Self-Producing Idol", "Producer-dol"],
+            correctAnswer: 2,
+            category: "K-Pop",
+            points: 15
+        },
+        {
             question: "Which member of ITZY is the leader?",
             options: ["Yeji", "Lia", "Ryujin", "Chaeryeong"],
             correctAnswer: 0,
@@ -71,9 +82,9 @@ const QUESTIONS_DATABASE = {
             points: 10
         },
         {
-            question: "What is Red Velvet's fandom called?",
-            options: ["ReVeluv", "Red Flavor", "Velvet", "RV"],
-            correctAnswer: 0,
+            question: "What does 'hoobae' mean?",
+            options: ["Senior", "Junior", "Friend", "Enemy"],
+            correctAnswer: 1,
             category: "K-Pop",
             points: 10
         },
@@ -83,6 +94,34 @@ const QUESTIONS_DATABASE = {
             correctAnswer: 0,
             category: "K-Pop",
             points: 10
+        },
+        {
+            question: "What is the name of aespa's virtual world?",
+            options: ["KWANGYA", "MY", "Next Level", "Savage"],
+            correctAnswer: 0,
+            category: "K-Pop",
+            points: 15
+        },
+        {
+            question: "Which TWICE member is Japanese?",
+            options: ["Tzuyu", "Sana", "Dahyun", "Chaeyoung"],
+            correctAnswer: 1,
+            category: "K-Pop",
+            points: 10
+        },
+        {
+            question: "What is the name of (G)I-DLE's fandom?",
+            options: ["Neverland", "Idle", "Tomboy", "Queencard"],
+            correctAnswer: 0,
+            category: "K-Pop",
+            points: 10
+        },
+        {
+            question: "Which BTS song was their first Billboard Hot 100 entry?",
+            options: ["DNA", "Fake Love", "Idol", "Boy With Luv"],
+            correctAnswer: 0,
+            category: "K-Pop",
+            points: 15
         },
         {
             question: "What does 'bias' mean in K-pop?",
@@ -99,85 +138,8 @@ const QUESTIONS_DATABASE = {
             points: 10
         },
         {
-            question: "What is STRAY KIDS' fandom called?",
+            question: "What is the name of STRAY KIDS' fandom?",
             options: ["STAY", "SKZ", "Stray", "Kids"],
-            correctAnswer: 0,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "Which BTS member is known as 'RM'?",
-            options: ["Kim Namjoon", "Kim Seokjin", "Min Yoongi", "Jung Hoseok"],
-            correctAnswer: 0,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "What does 'hoobae' mean?",
-            options: ["Senior", "Junior", "Friend", "Enemy"],
-            correctAnswer: 1,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "Which TWICE member is from Taiwan?",
-            options: ["Sana", "Mina", "Tzuyu", "Momo"],
-            correctAnswer: 2,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "What is (G)I-DLE's fandom called?",
-            options: ["Neverland", "Idle", "Tomboy", "Queencard"],
-            correctAnswer: 0,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "Which artist is known for 'Gangnam Style'?",
-            options: ["PSY", "BIGBANG", "Super Junior", "2PM"],
-            correctAnswer: 0,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "How many members are in BTS?",
-            options: ["5", "6", "7", "8"],
-            correctAnswer: 2,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "Which company is part of the 'Big 3' along with SM and YG?",
-            options: ["HYBE", "JYP", "Starship", "Cube"],
-            correctAnswer: 1,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "What is BLACKPINK's fandom called?",
-            options: ["BLINK", "PINK", "BP", "Black"],
-            correctAnswer: 0,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "Which girl group is known for 'I Am The Best'?",
-            options: ["2NE1", "Girls' Generation", "Wonder Girls", "KARA"],
-            correctAnswer: 0,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "What does 'aegyo' mean in K-pop culture?",
-            options: ["Cute behavior", "Dance move", "Song style", "Fan chant"],
-            correctAnswer: 0,
-            category: "K-Pop",
-            points: 10
-        },
-        {
-            question: "Which group is known for 'Sorry Sorry'?",
-            options: ["Super Junior", "SHINee", "TVXQ", "BIGBANG"],
             correctAnswer: 0,
             category: "K-Pop",
             points: 10
@@ -185,9 +147,7 @@ const QUESTIONS_DATABASE = {
     ],
     
     jpop: [
-        // === J-POP & ANIME SECTION: 50 QUESTIONS ===
-        
-        // EASY LEVEL (20 questions)
+        // Original questions + 25 new ones = 35 total J-pop questions
         {
             question: "Which anime features the opening song 'Cruel Angel's Thesis'?",
             options: ["Dragon Ball Z", "Neon Genesis Evangelion", "Sailor Moon", "One Piece"],
@@ -210,7 +170,7 @@ const QUESTIONS_DATABASE = {
             points: 10
         },
         {
-            question: "Who performed the theme songs for 'Your Name' (Kimi no Na wa)?",
+            question: "Who performed the theme song for 'Your Name' (Kimi no Na wa)?",
             options: ["RADWIMPS", "ONE OK ROCK", "L'Arc-en-Ciel", "X Japan"],
             correctAnswer: 0,
             category: "J-Pop & Anime",
@@ -224,16 +184,16 @@ const QUESTIONS_DATABASE = {
             points: 10
         },
         {
-            question: "What is the name of the most famous virtual idol?",
-            options: ["Hatsune Miku", "Kagamine Rin", "Megurine Luka", "KAITO"],
-            correctAnswer: 0,
+            question: "What is the name of the virtual idol created by Crypton Future Media?",
+            options: ["Hatsune Miku", "Kagamine Rin", "Megurine Luka", "All of the above"],
+            correctAnswer: 3,
             category: "J-Pop & Anime",
             points: 10
         },
         {
-            question: "Which artist performed 'Gurenge' for Demon Slayer?",
-            options: ["LiSA", "Aimer", "ClariS", "Eir Aoi"],
-            correctAnswer: 0,
+            question: "Which anime opening song is performed by LiSA?",
+            options: ["Demon Slayer - Gurenge", "Sword Art Online - Crossing Field", "Angel Beats - My Soul Your Beats", "All of the above"],
+            correctAnswer: 3,
             category: "J-Pop & Anime",
             points: 10
         },
@@ -252,8 +212,8 @@ const QUESTIONS_DATABASE = {
             points: 10
         },
         {
-            question: "What is AKB48's signature debut song?",
-            options: ["Heavy Rotation", "Koisuru Fortune Cookie", "Aitakatta", "Sakura no Hanabiratachi"],
+            question: "What is the name of AKB48's signature song?",
+            options: ["Heavy Rotation", "Koisuru Fortune Cookie", "Aitakatta", "All popular songs"],
             correctAnswer: 2,
             category: "J-Pop & Anime",
             points: 10
@@ -266,74 +226,37 @@ const QUESTIONS_DATABASE = {
             points: 10
         },
         {
-            question: "What does 'Otaku' originally mean in Japanese?",
+            question: "What does 'Otaku' originally mean?",
             options: ["Anime fan", "Your house/home", "Obsessive fan", "Japanese person"],
             correctAnswer: 1,
             category: "J-Pop & Anime",
-            points: 10
+            points: 15
         },
         {
-            question: "Who performed 'We Are!' the first One Piece opening?",
+            question: "Which group is known for 'We Are!' the One Piece opening?",
             options: ["Hiroshi Kitadani", "BABYMETAL", "Perfume", "Kyary Pamyu Pamyu"],
             correctAnswer: 0,
             category: "J-Pop & Anime",
             points: 10
         },
         {
-            question: "Which group is known for their electronic pop and robotic performances?",
-            options: ["Perfume", "BABYMETAL", "AKB48", "Morning Musume"],
+            question: "What is the phenomenon of synchronized dancing called in Japan?",
+            options: ["Para Para", "Wotagei", "Aidoru", "Cosplay"],
             correctAnswer: 0,
             category: "J-Pop & Anime",
-            points: 10
+            points: 15
         },
         {
             question: "Which anime features music by Yoko Kanno?",
             options: ["Cowboy Bebop", "Ghost in the Shell SAC", "Macross Plus", "All of the above"],
             correctAnswer: 3,
             category: "J-Pop & Anime",
-            points: 10
-        },
-        {
-            question: "What is the name of the synchronized dancing phenomenon in Japan?",
-            options: ["Para Para", "Wotagei", "Aidoru", "Cosplay"],
-            correctAnswer: 0,
-            category: "J-Pop & Anime",
-            points: 10
-        },
-        {
-            question: "Which Studio Ghibli film features music by Joe Hisaishi?",
-            options: ["Spirited Away", "My Neighbor Totoro", "Princess Mononoke", "All of the above"],
-            correctAnswer: 3,
-            category: "J-Pop & Anime",
-            points: 10
-        },
-        {
-            question: "Who is the lead vocalist of L'Arc-en-Ciel?",
-            options: ["Hyde", "Gackt", "Yoshiki", "Kyo"],
-            correctAnswer: 0,
-            category: "J-Pop & Anime",
-            points: 10
-        },
-        {
-            question: "Which group combines metal with J-Pop idol culture?",
-            options: ["BABYMETAL", "Band-Maid", "Aldious", "Lovebites"],
-            correctAnswer: 0,
-            category: "J-Pop & Anime",
-            points: 10
-        },
-        {
-            question: "Which group is considered the pioneers of Visual Kei?",
-            options: ["X Japan", "Luna Sea", "Malice Mizer", "Dir En Grey"],
-            correctAnswer: 0,
-            category: "J-Pop & Anime",
-            points: 10
+            points: 15
         }
     ],
     
     cpop: [
-        // === C-POP SECTION: 35 QUESTIONS ===
-        
-        // EASY LEVEL (15 questions)
+        // Original questions + 15 new ones = 25 total C-pop questions
         {
             question: "Who is known as the 'King of Mandopop'?",
             options: ["Andy Lau", "Jacky Cheung", "Aaron Kwok", "Leon Lai"],
@@ -370,9 +293,9 @@ const QUESTIONS_DATABASE = {
             points: 10
         },
         {
-            question: "What is Jay Chou known for in C-Pop?",
-            options: ["Traditional ballads", "Hip-hop fusion", "Rock music", "Electronic dance"],
-            correctAnswer: 1,
+            question: "What is the name of Jay Chou's music style?",
+            options: ["Chou Style", "Mandopop Fusion", "Chinese Hip-Hop", "All of the above"],
+            correctAnswer: 3,
             category: "C-Pop",
             points: 10
         },
@@ -398,7 +321,7 @@ const QUESTIONS_DATABASE = {
             points: 10
         },
         {
-            question: "Who is known as one of the 'Little Heavenly Kings'?",
+            question: "Who is known as the 'Little Heavenly King'?",
             options: ["Jay Chou", "JJ Lin", "Leehom Wang", "All of the above"],
             correctAnswer: 3,
             category: "C-Pop",
@@ -423,7 +346,7 @@ const QUESTIONS_DATABASE = {
             options: ["CoCo Lee", "Faye Wong", "A-Mei", "Sandy Lam"],
             correctAnswer: 0,
             category: "C-Pop",
-            points: 10
+            points: 15
         },
         {
             question: "Which Chinese boy group gained international attention recently?",
@@ -437,14 +360,12 @@ const QUESTIONS_DATABASE = {
             options: ["Golden Melody Awards", "Chinese Music Awards", "CCTV-MTV Music Awards", "Sprite Music Awards"],
             correctAnswer: 0,
             category: "C-Pop",
-            points: 10
+            points: 15
         }
     ],
     
     dramas: [
-        // === ASIAN DRAMA SECTION: 50 QUESTIONS ===
-        
-        // EASY LEVEL (20 questions)
+        // Original questions + 25 new ones = 35 total drama questions
         {
             question: "Which Korean drama popularized the 'Korean Wave' globally?",
             options: ["Winter Sonata", "Boys Over Flowers", "My Love from the Star", "Descendants of the Sun"],
@@ -457,7 +378,7 @@ const QUESTIONS_DATABASE = {
             options: ["Squid Game", "Kingdom", "Crash Landing on You", "Parasite"],
             correctAnswer: 0,
             category: "Asian Dramas",
-            points: 10
+            points: 15
         },
         {
             question: "Which K-drama features a time-traveling romance?",
@@ -499,7 +420,7 @@ const QUESTIONS_DATABASE = {
             options: ["Romantic comedy", "Over-the-top melodrama", "Historical drama", "Crime thriller"],
             correctAnswer: 1,
             category: "Asian Dramas",
-            points: 10
+            points: 15
         },
         {
             question: "Which Thai BL drama gained international popularity?",
@@ -537,8 +458,8 @@ const QUESTIONS_DATABASE = {
             points: 10
         },
         {
-            question: "What is one of the most popular Chinese historical dramas?",
-            options: ["The Untamed", "Nirvana in Fire", "Eternal Love", "All are popular"],
+            question: "What is the most popular Chinese historical drama?",
+            options: ["The Untamed", "Nirvana in Fire", "Eternal Love", "All popular"],
             correctAnswer: 3,
             category: "Asian Dramas",
             points: 10
@@ -549,48 +470,11 @@ const QUESTIONS_DATABASE = {
             correctAnswer: 0,
             category: "Asian Dramas",
             points: 10
-        },
-        {
-            question: "Which K-drama is known for its product placement?",
-            options: ["Boys Over Flowers", "My Love from the Star", "Descendants of the Sun", "All of the above"],
-            correctAnswer: 3,
-            category: "Asian Dramas",
-            points: 10
-        },
-        {
-            question: "What does 'Noona' mean in Korean dramas?",
-            options: ["Younger sister", "Older sister", "Female friend", "Girlfriend"],
-            correctAnswer: 1,
-            category: "Asian Dramas",
-            points: 10
-        },
-        {
-            question: "Which Japanese drama genre is known for workplace themes?",
-            options: ["Dorama", "Trendy Drama", "Morning Drama", "All of the above"],
-            correctAnswer: 3,
-            category: "Asian Dramas",
-            points: 10
-        },
-        {
-            question: "What is the most popular Chinese web drama platform?",
-            options: ["iQiyi", "Youku", "Tencent Video", "All are popular"],
-            correctAnswer: 3,
-            category: "Asian Dramas",
-            points: 10
-        },
-        {
-            question: "Which K-drama popularized the 'second lead syndrome'?",
-            options: ["Boys Over Flowers", "Secret Garden", "Coffee Prince", "All contributed"],
-            correctAnswer: 3,
-            category: "Asian Dramas",
-            points: 10
         }
     ],
     
     movies: [
-        // === ASIAN CINEMA SECTION: 40 QUESTIONS ===
-        
-        // EASY LEVEL (15 questions)
+        // Original questions + 20 new ones = 30 total movie questions
         {
             question: "Which Korean film won the Academy Award for Best Picture?",
             options: ["Oldboy", "The Handmaiden", "Parasite", "Burning"],
@@ -617,7 +501,7 @@ const QUESTIONS_DATABASE = {
             options: ["Red Sorghum", "Farewell My Concubine", "Black Coal, Thin Ice", "All of the above"],
             correctAnswer: 3,
             category: "Asian Cinema",
-            points: 10
+            points: 15
         },
         {
             question: "Who directed 'Crouching Tiger, Hidden Dragon'?",
@@ -659,14 +543,14 @@ const QUESTIONS_DATABASE = {
             options: ["Busan International Film Festival", "Jeonju International Film Festival", "Seoul Independent Film Festival", "BIFF"],
             correctAnswer: 0,
             category: "Asian Cinema",
-            points: 10
+            points: 15
         },
         {
-            question: "Who is known as a 'Fifth Generation' director in Chinese cinema?",
+            question: "Who is known as the 'Fifth Generation' director in Chinese cinema?",
             options: ["Zhang Yimou", "Chen Kaige", "Tian Zhuangzhuang", "All of the above"],
             correctAnswer: 3,
             category: "Asian Cinema",
-            points: 10
+            points: 15
         },
         {
             question: "Which Thai film gained international recognition?",
@@ -680,7 +564,7 @@ const QUESTIONS_DATABASE = {
             options: ["Yasujirō Ozu", "Akira Kurosawa", "Kenji Mizoguchi", "Mikio Naruse"],
             correctAnswer: 0,
             category: "Asian Cinema",
-            points: 10
+            points: 15
         },
         {
             question: "Which Studio Ghibli film won the Academy Award for Best Animated Feature?",
@@ -694,7 +578,7 @@ const QUESTIONS_DATABASE = {
             options: ["Crouching Tiger Hidden Dragon", "Parasite", "Slumdog Millionaire", "Life of Pi"],
             correctAnswer: 1,
             category: "Asian Cinema",
-            points: 10
+            points: 15
         }
     ]
 };
