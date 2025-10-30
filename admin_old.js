@@ -30,20 +30,21 @@ class AdminSystem {
     }
 
     addAdminAccessButton() {
-        // Add admin access button under the login button
-        const loginForm = document.getElementById('loginForm');
+        // Add a small admin access button in the footer
         const adminAccess = document.createElement('div');
-        adminAccess.className = 'admin-access-login';
+        adminAccess.className = 'admin-access';
         adminAccess.innerHTML = `
-            <button id="adminAccessBtn" class="admin-access-btn-login" title="Admin Access">
-                <i class="fas fa-key"></i> Admin Access
+            <button id="adminAccessBtn" class="admin-access-btn" title="Admin Access">
+                <i class="fas fa-key"></i>
             </button>
         `;
         adminAccess.style.cssText = `
-            text-align: center;
-            margin-top: 1rem;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
         `;
-        loginForm.appendChild(adminAccess);
+        document.body.appendChild(adminAccess);
 
         document.getElementById('adminAccessBtn').addEventListener('click', () => {
             this.showAdminLogin();
